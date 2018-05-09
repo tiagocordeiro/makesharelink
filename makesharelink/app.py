@@ -29,7 +29,7 @@ def create_app():
         print(price.text)
         print(description.text[:896] + '...')
         print('saiba mais ' + url)
-        return render_template('index.html', url=url, product=product.text,
+        return render_template('product.html', url=url, product=product.text,
                                image=image.attrs['src'], price=pricevalue,
                                description=description.text[:896] + '...')
 

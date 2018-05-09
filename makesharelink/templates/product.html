@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 
     <title>{{product}} - {{price}}</title>
     <meta property="og:title" content="{{product}} - {{price}} - saiba mais: {{url}}" />
@@ -17,12 +18,23 @@
     <meta property="og:image" content="{{image}}" />
   </head>
   <body>
-    <h1>{{product}} - {{price}}</h1>
-	<img src="{{image}}">
-	<p>{{description|safe}}</p>
-	<p>{{url}}</p>
-
-	<a class="btn btn-success" href="https://api.whatsapp.com/send?text={{product}} | {{price}} | Saiba mais: {{url}}" role="button"><i class="fab fa-whatsapp"></i> Compartilhar</a>
+  <div class="container">
+      <div class="row">
+          <h1>{{product}} - {{price}}</h1>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-lg-6">
+          <img style="max-width: 100%; height: auto;" src="{{image}}" class="img-fluid" alt="{{product}}">
+        </div>
+        <div class="col-xs-12 col-sm-12 col-lg-6">
+          <p class="lead">{{description|safe}}</p>
+          <p>{{url}}</p>
+        </div>
+      </div>
+      <div class="row">
+          <a class="btn btn-success" href="https://api.whatsapp.com/send?text={{product}} | {{price}} | Saiba mais: {{url}}" role="button"><i class="fab fa-whatsapp"></i> Compartilhar</a>
+      </div>
+  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
